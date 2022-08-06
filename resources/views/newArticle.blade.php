@@ -41,6 +41,7 @@
    * Initialize the Editor
    */
   const editor = new EditorJS({
+    placeholder: 'Let`s write an awesome story!',
     autofocus: true,
     tools: {
       gif: {
@@ -103,18 +104,6 @@
           }
         }
       }
-    },
-    data: {
-      time: 1552744582955,
-      blocks: [
-        {
-            type: "paragraph",
-            data: {
-                text: "Start Writing"
-            }
-        }
-      ],
-      version: "2.11.10"
     }
   });
 

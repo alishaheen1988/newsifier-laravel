@@ -114,8 +114,8 @@ class SimpleImage {
   searchHandler = ($event) => {
     if ($event.currentTarget.id == 'searchBtn' + this.compId)
       this.page = 0;
-    if($('#searchBox' + this.compId).val())
-    $.get("http://localhost:3000/giffs/" + $('#searchBox' + this.compId).val() + '/' + this.page, this.ajaxHandler);
+    if ($('#searchBox' + this.compId).val())
+      $.get("http://localhost:3000/giffs/" + $('#searchBox' + this.compId).val() + '/' + this.page, this.ajaxHandler);
   }
 
   ajaxHandler = (data, status) => {
@@ -154,7 +154,8 @@ class SimpleImage {
   }
 
   imageClick = (event) => {
-    $("#" + this.selectedImage.id).removeClass("selected");
+    if (this.selectedImage && this.selectedImage.id)
+      $("#" + this.selectedImage.id).removeClass("selected");
     this.selectedImage = this.giffs.find(a => a.id == event.currentTarget.id);
     $("#" + event.currentTarget.id).addClass("selected");
 

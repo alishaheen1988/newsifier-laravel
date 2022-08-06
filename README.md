@@ -13,7 +13,7 @@ These are the commands you should execute one by one to run the project:
 - copy the .env.example to .env file and set the database connection settings
 - php artisan migrate
 - php artisan key:generate
-- php artisan serve
+- php artisan serve  
 Open another command prompt and go to the project folder, then run these 2 commands:
 - npm install
 - npm run dev

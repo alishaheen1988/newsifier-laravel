@@ -14,6 +14,6 @@ These are the commands you should execute one by one to run the project:
 - php artisan migrate
 - php artisan key:generate
 - php artisan serve  
-Open another command prompt and go to the project folder, then run these 2 commands:
+### Open another command prompt and go to the project folder, then run these 2 commands:
 - npm install
 - npm run dev

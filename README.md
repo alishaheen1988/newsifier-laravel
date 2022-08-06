@@ -17,3 +17,4 @@ These are the commands you should execute one by one to run the project:
 ### Open another command prompt and go to the project folder, then run these 2 commands:
 - npm install
 - npm run dev
+### Then make sure that the node project is running and open you browser and go to http://localhost:8000/ 

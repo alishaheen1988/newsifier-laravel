@@ -112,17 +112,20 @@ class SimpleImage {
   }
 
   searchHandler = ($event) => {
-    if ($event.currentTarget.id == 'searchBtn' + this.compId)
+    if ($event.currentTarget.id == 'searchBtn' + this.compId){
       this.page = 0;
+      this.giffs=[];
+    }
+      
     if ($('#searchBox' + this.compId).val())
       $.get("http://localhost:3000/giffs/" + $('#searchBox' + this.compId).val() + '/' + this.page, this.ajaxHandler);
   }
 
   ajaxHandler = (data, status) => {
     if (status == 'success') {
-      this.giffs = data.data;
+      this.giffs.push(...data.data)
       let giffModalContainer = ''
-      for (const giff of this.giffs) {
+      for (const giff of data.data) {
 
         giffModalContainer += `<div class='col-sm-2' style='margin-bottom:10px'>
       <img id="${giff.id}" class='clickableimage' style='max-height:100px' imgType='thumbnails' src="${giff.images.fixed_width_small.url}" alt="${giff.title}">
